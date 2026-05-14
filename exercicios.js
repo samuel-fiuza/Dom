@@ -21,12 +21,16 @@
 // ============================================================
 
 function exercicio1() {
-
+    const titulo = document.getElementById("titulo-ex1")
+    const lido = document.getElementById("resultado-ex1")
+    
+        lido.textContent = `titulo encontrado: ` + titulo.textContent
+        console.log(`elemento ${titulo}`)
+        console.log(`Texto ${titulo.textContent}`)
     // TODO: selecione o elemento pelo id e leia o textContent
 
 
     // TODO: coloque o texto dentro do id="resultado-ex1"
-
 }
 
 
@@ -53,7 +57,20 @@ function exercicio1() {
 let favoritado = false;
 
 function exercicio2() {
+    favoritado = !favoritado
+    const card = document.getElementById("card-ex2")
+    const btn = document.getElementById("btn-ex2")
+    const text = document.getElementById("resultado-ex2")
+    if (favoritado) {
+        card.classList.add("card-favoritado-ex")
+        btn.textContent = "❤️ Favoritar"
+        text.textContent = "❤️ Breaking Bad foi favoritado"
+    } else {
+        card.classList.remove("card-favoritado-ex")
+        btn.textContent = "💔 Desfavoritar"
+        text.textContent = "Série removida dos favoritos."
 
+    }
     // TODO: inverter o valor de favoritado
 
 
